@@ -1,7 +1,6 @@
-// importing necassary library
 import mongoose from 'mongoose';
 
-// creating schema for user
+
 const userSchema = new mongoose.Schema({
   username: { type: String, required: true, trim: true, unique: true },
   email:    { type: String, required: true, trim: true, unique: true },
@@ -10,6 +9,7 @@ const userSchema = new mongoose.Schema({
   channels: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Channel' }]
 }, { timestamps: true });
 
-// creating model for user schema
+
+
 const User = mongoose.model('User', userSchema);
 export default User;

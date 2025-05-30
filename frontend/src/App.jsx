@@ -1,4 +1,3 @@
-// importing necessary hooks, components and css file
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Youtube from "./components/Youtube";
@@ -10,15 +9,16 @@ import Channel from "./components/Channel";
 import NotFound from "./components/NotFound"
 import "./utils/style.css";
 
-function App() {
 
-// state variables to store searched text, signin status, username and avatar
+
+function App() {
   const [search, setSearch] = useState("");
   const [signedIn, setSignedIn] = useState(!!localStorage.getItem("token"));
   const [username, setUsername] = useState(localStorage.getItem("username") || "");
   const [avatar, setAvatar] = useState(localStorage.getItem("avatar") || "");
 
-// rendering the components using BrowserRouter with Youtube as parent element and rest as its children
+
+
   return (
   <BrowserRouter>
   <Routes>

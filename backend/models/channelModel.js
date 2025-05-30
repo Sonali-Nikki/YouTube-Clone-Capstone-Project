@@ -1,7 +1,7 @@
-// importing necessary library
 import mongoose from 'mongoose';
 
-// creating schema for channel
+
+
 const channelSchema = new mongoose.Schema({
   channelName: { type: String, trim: true, required: true },
   description: { type: String, trim: true, default: 'A channel for educational/entertainment purpose' },
@@ -12,6 +12,7 @@ const channelSchema = new mongoose.Schema({
   videos: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Video' }]
 }, { timestamps: true });
 
-// creating model for channel schema
+
+
 const Channel = mongoose.model('Channel', channelSchema);
 export default Channel;

@@ -1,7 +1,6 @@
-// importing necessary library
 import mongoose from "mongoose";
 
-// creating schema for video
+
 const videoSchema = new mongoose.Schema({
   title: { type: String, trim: true, required: true },
   videoUrl: { type: String, trim: true, required: true },
@@ -17,6 +16,7 @@ const videoSchema = new mongoose.Schema({
   comments: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Comment' }]
 }, { timestamps: true });
 
-// creating model for video schema
+
+
 const Video = mongoose.model('Video', videoSchema);
 export default Video;

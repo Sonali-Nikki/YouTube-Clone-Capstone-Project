@@ -1,7 +1,5 @@
-// importing necessary library
 import mongoose from 'mongoose';
 
-// cteating schema for comment
 const commentSchema = new mongoose.Schema(
   {
     text: { type: String, trim: true, required: true },
@@ -9,6 +7,7 @@ const commentSchema = new mongoose.Schema(
     user: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true }
   }, { timestamps: true });
 
-  // creating model for comment schema
-const Comment = mongoose.model('Comment', commentSchema);
+
+
+  const Comment = mongoose.model('Comment', commentSchema);
 export default Comment;

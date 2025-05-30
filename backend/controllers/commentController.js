@@ -1,8 +1,8 @@
-// importing necessary models
 import Video from "../models/videoModel.js";
 import Comment from "../models/commentModel.js";
 
-// controller to add a comment to a video by a signed in user
+
+
 export const addComment = async (req, res) => {
   const { text, video } = req.body;
   try {
@@ -23,7 +23,8 @@ export const addComment = async (req, res) => {
   }
 };
 
-// controller to edit the comment if the owner is signed in
+
+
 export const editComment = async (req, res) => {
   const { text } = req.body;
   try {
@@ -34,7 +35,6 @@ export const editComment = async (req, res) => {
       },
       { new: true }
     );
-
     if (!comment) return res.status(404).json({ message: 'Comment does not exist' });
     res.json(comment);
   } catch (err) {
@@ -42,7 +42,7 @@ export const editComment = async (req, res) => {
   }
 };
 
-// controller to delete a comment if the owner is signed in
+
 export const deleteComment = async (req, res) => {
   try {
     const comment = await Comment.findByIdAndDelete(req.params.commentId);

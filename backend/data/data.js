@@ -3,7 +3,7 @@ export const adminData = {
     username: "Sonali",
     email: "sonali@gmail.com",
     password: "sonaliPassword",
-    avatar: "https://img.freepik.com/premium-vector/young-man-avatar-character-due-avatar-man-vector-icon-cartoon-illustration_1186924-4438.jpg?semt=ais_hybrid&w=740"
+    avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCMDKvDLrPdTJtG5O4y3W61Wdqg20GwOOpUA&s"
   },
   loginData: {
     username: "Sonali",
@@ -11,7 +11,7 @@ export const adminData = {
   }
 }
 
-// register and login data for the 10 users who will add 1 comment each to each video
+
 export const usersData = [
   {
     registerData: {
@@ -135,339 +135,8 @@ export const usersData = [
   }
 ];
 
-// the data of 10 channels which the admin user will create and in each channel 10 videos which the admin user will upload to the channel and in each video 10 comments which the users will add to the video
+
 export const channelsData = [
-  {
-    channelData: {
-      channelName: 'Sony SAB',
-      description: 'Official Account of Sony SAB, a leading Hindi GEC within Sony Pictures Networks. Its the Home of good content committed to diverse storytelling & evoking real emotions. We believe in Jo roz choti khushiya dete hai, wohi rishtey toh bade hote hai',
-      channelBanner: 'https://yt3.googleusercontent.com/txWpKJQ3hO7z7WShtA14ej5Y5rG5INZfCiH9FXkI1hU-K4qhxKJaxZirTMQKvWS8v1WHuetrs1Q=w1060-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj',
-      channelLogo: 'https://yt3.googleusercontent.com/W6hlyHF8FP_YVLnkzBGQYtdpf0hB8pILZvQYw4jMYIqgcGeS1RBTvk9VHUXGk3mDZhhv-26o-zc=s160-c-k-c0x00ffffff-no-rj',
-      subscribers: 101000
-    },
-    channelVideo: [
-      {
-        videoData: {
-          title: 'Jetha को मिला College के Admission का Shortcut | Taarak Mehta Ka Ooltah Chashmah | College Admission',
-          videoUrl: 'https://youtu.be/0Y0013hFIzA',
-          description: 'Jethalal with a boost of courage leaves to meet Taarak at the college to expose the notorious activities of Setting Bhai. Reaching the canteen where Setting Bhai is, Jethalal and Taarak approach him and offer to pay him any sum of money for the admission. Nattu Kaka and Bagha get the cash to Jethalas house and they both are extremely proud of Jethalal when they learn about the purpose of the cash.',
-          thumbnailUrl: 'https://i.ytimg.com/an_webp/0Y0013hFIzA/mqdefault_6s.webp?du=3000&sqp=CKDo5cEG&rs=AOn4CLCUnEoPe0YFlbNCZwduqPdtebFuZQ',
-          category: 'Comedy',
-          views: '48',
-          likes: '30',
-          dislikes: '2'
-        },
-        videoComment: [
-          {
-            commentData: {
-              text: 'I love meditation'
-            }
-          },
-          {
-            commentData: {
-              text: 'meditation and yoga are the best'
-            }
-          },
-          {
-            commentData: {
-              text: 'i love this channel'
-            }
-          },
-          {
-            commentData: {
-              text: 'very informative video'
-            }
-          },
-          {
-            commentData: {
-              text: 'i can say its true'
-            }
-          },
-          {
-            commentData: {
-              text: 'we should always do meditation'
-            }
-          },
-          {
-            commentData: {
-              text: 'please upload more such videos'
-            }
-          },
-          {
-            commentData: {
-              text: 'i will also start meditation'
-            }
-          },
-          {
-            commentData: {
-              text: 'i feel very happy when i do meditation'
-            }
-          },
-          {
-            commentData: {
-              text: 'not very informative'
-            }
-          }
-        ]
-      },
-      {
-        videoData: {
-          title: 'Pushpa Impossible',
-          videoUrl: 'https://youtu.be/aa3zWPBye3w',
-          description: 'Watch the recap of your favorite show, with all the new episodes. Here you can catch a glimpse of your favorite shows in just minutes in case you missed out on the fun. These recaps will highlight the best moments from the entire episode so that in case you missed watching the full show or the episode, you will be in the loop regardless! .',
-          thumbnailUrl: 'https://i.ytimg.com/an_webp/aa3zWPBye3w/mqdefault_6s.webp?du=3000&sqp=CLCQ5sEG&rs=AOn4CLBgYloEfM_iKanmjGMOZ63MowisTw',
-          category: 'Comedy',
-          views: '90',
-          likes: '9',
-          dislikes: '7'
-        },
-        videoComment: [
-          {
-            commentData: {
-              text: 'amazing video'
-            }
-          },
-          {
-            commentData: {
-              text: 'wow, i love this video'
-            }
-          },
-          {
-            commentData: {
-              text: 'its interesting video'
-            }
-          },
-          {
-            commentData: {
-              text: 'i love science'
-            }
-          },
-          {
-            commentData: {
-              text: 'i also want to scan a brain'
-            }
-          },
-          {
-            commentData: {
-              text: 'keep uploading such videos'
-            }
-          },
-          {
-            commentData: {
-              text: 'love from bihar'
-            }
-          },
-          {
-            commentData: {
-              text: 'not interesting'
-            }
-          },
-          {
-            commentData: {
-              text: 'oh my god'
-            }
-          },
-          {
-            commentData: {
-              text: 'is it really possible'
-            }
-          }
-        ]
-      },
-      {
-        videoData: {
-          title: 'Popatlal को नहीं करना Dr. Hathi से इलाज | Taarak Mehta Ka Ooltah Chashmah | Popatlal Ki Treatment',
-          videoUrl: 'https://youtu.be/wxxramqrY0M',
-          description: `Popatlal is forcefully taken to Dr. Hathi's clinic for treatment but is still furious with him. A Man comes to Gokuldham with his daughter to consult Dr. Hathi for her daughter's marriage. Popatlal's anger vanishes instantly. Popatlal feels sad on realizing that the girl he was planning to marry loves someone else. Tapu Sena while playing cricket break Bhide's Uncle's car and he leaves angrily without visiting Bhide's house.`,
-          thumbnailUrl: 'https://i.ytimg.com/an_webp/wxxramqrY0M/mqdefault_6s.webp?du=3000&sqp=CJXi5cEG&rs=AOn4CLAh1cQOhXCycEvffrcqZyrUPQoVfg',
-          category: 'Comedy',
-          views: '55',
-          likes: '15',
-          dislikes: '2'
-        },
-        videoComment: [
-          {
-            commentData: {
-              text: 'i also voted for BJP'
-            }
-          },
-          {
-            commentData: {
-              text: 'kejrival is a good politician'
-            }
-          },
-          {
-            commentData: {
-              text: 'vote for BJP'
-            }
-          },
-          {
-            commentData: {
-              text: 'delhi should be a full state'
-            }
-          },
-          {
-            commentData: {
-              text: 'delhi education system is very good'
-            }
-          },
-          {
-            commentData: {
-              text: 'i also live in delhi'
-            }
-          },
-          {
-            commentData: {
-              text: 'i love kejriwal'
-            }
-          },
-          {
-            commentData: {
-              text: 'AAP is a corrupt party'
-            }
-          },
-          {
-            commentData: {
-              text: 'manish sisodia is a good person'
-            }
-          },
-          {
-            commentData: {
-              text: 'delhi is very polluted city'
-            }
-          }
-        ]
-      },
-      {
-        videoData: {
-          title: `Wagle Ki Duniya | वागले की दुनिया | Ep 1301 | Coming Up Next`,
-          videoUrl: 'https://youtu.be/r39NOvxokmw',
-          description: 'The Lallantop has team and left to cover Loksabha Elections 2024. Watch the video to know where Saurabh Dwivedi, Abhinav Pandey, Sonal Pateria, Nikhil Wath, Siddhant Mohan and others are coming.',
-          thumbnailUrl: 'https://i.ytimg.com/an_webp/r39NOvxokmw/mqdefault_6s.webp?du=3000&sqp=CIyc5sEG&rs=AOn4CLAB5507GR26_cyTaR2jreQH6rgxmw',
-          category: 'comedy',
-          views: '40287',
-          likes: '472',
-          dislikes: '13'
-        },
-        videoComment: [
-          {
-            commentData: {
-              text: 'worst election ever'
-            }
-          },
-          {
-            commentData: {
-              text: 'high political drama'
-            }
-          },
-          {
-            commentData: {
-              text: 'vote for BJP'
-            }
-          },
-          {
-            commentData: {
-              text: 'i love congress'
-            }
-          },
-          {
-            commentData: {
-              text: 'vote for akhilesh yadav'
-            }
-          },
-          {
-            commentData: {
-              text: 'modi is the best leader'
-            }
-          },
-          {
-            commentData: {
-              text: 'lallantop is the best channel'
-            }
-          },
-          {
-            commentData: {
-              text: 'thanks for your efforts'
-            }
-          },
-          {
-            commentData: {
-              text: 'voting for the first time'
-            }
-          },
-          {
-            commentData: {
-              text: 'we must use our vote'
-            }
-          }
-        ]
-      },
-      {
-        videoData: {
-          title: 'Tenali Rama | Ep 141 & Ep 142 | RECAP | तेनाली रामा',
-          videoUrl: 'https://youtu.be/hxgNCfag_nU',
-          description: 'Watch the recap of your favorite show, with all the new episodes. Here you can catch a glimpse of your favorite shows in just minutes in case you missed out on the fun. These recaps will highlight the best moments from the entire episode so that in case you missed watching the full show or the episode, you will be in the loop regardless! ',
-          thumbnailUrl: 'https://i.ytimg.com/an_webp/hxgNCfag_nU/mqdefault_6s.webp?du=3000&sqp=CLWi5sEG&rs=AOn4CLAlQr0O3Pc66KKdXQboeaaGWwb8jg',
-          category: 'Comedy',
-          views: '565',
-          likes: '23',
-          dislikes: '9'
-        },
-        videoComment: [
-          {
-            commentData: {
-              text: 'manipur is burning'
-            }
-          },
-          {
-            commentData: {
-              text: 'save manipur'
-            }
-          },
-          {
-            commentData: {
-              text: 'pray for manipur'
-            }
-          },
-          {
-            commentData: {
-              text: 'modi should visit manipur'
-            }
-          },
-          {
-            commentData: {
-              text: 'help manipur'
-            }
-          },
-          {
-            commentData: {
-              text: 'this is very sad news'
-            }
-          },
-          {
-            commentData: {
-              text: 'raise the voice for manipur'
-            }
-          },
-          {
-            commentData: {
-              text: 'how can i help'
-            }
-          },
-          {
-            commentData: {
-              text: 'so sad'
-            }
-          },
-          {
-            commentData: {
-              text: 'my heart is broken'
-            }
-          }
-        ]
-      },
-    ]
-  },
   {
     channelData: {
       channelName: 'Dhruv Rathee',
@@ -1121,68 +790,53 @@ export const channelsData = [
   },
   {
     channelData: {
-      channelName: 'The Quint',
-      description: 'We dive deep to bring you immersive and engaging videos that challenge the status quo. Our content offers intelligent perspectives on everything that matters — politics, entertainment, sports, gender, climate change, health, etc.',
-      channelBanner: 'https://yt3.googleusercontent.com/xcjQGsQM4CDhcSxykAvBRvP7baUcQ_ndhRs-qoR_qGI7-jODd0GXkUC414_Z5KX-pJ9kOna8Hg=w1138-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj',
-      channelLogo: 'https://yt3.googleusercontent.com/ytc/AIdro_mzjg7souvvWFSBEsRCN8N7okfo4i6mCkMdbW5ZbupgRi8=s160-c-k-c0x00ffffff-no-rj',
-      subscribers: 4063
+      channelName: 'Internshala',
+      description: 'Welcome to official YouTube channel of Internshala. We are your hosts - Arun & Ankita - two aam YouTubers with a very special mission - to get you (and every college student in India) THE BEST start to your career 🚀.Be it internships or fresher jobs, new skills or technologies, courses, workshops and college events, tips on making your resume, preparing for interviews or industry news - we will cover everything that shapes your career and helps you claim your place in the world 🌍!',
+      channelBanner: 'https://yt3.googleusercontent.com/XjKALtYiSSS8TG2yOqgFKF3Pl3DWqu49UsmxKIn6k9nItnLLJYdvzl6m8zhKE6-6fgCun1NY=w1060-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj',
+      channelLogo: 'https://yt3.googleusercontent.com/foVCTywFAyUZG05GpiGEAJhgOv7UFcgm-ymCTAxXg85tMvc506VvSUo4xsbsAavj1DrTbaqTW10=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 1360
     },
     channelVideo: [
       {
         videoData: {
-          title: 'The Quint: Meet The Indian Scientist On The Verge of Revolutionising Medicine',
-          videoUrl: 'https://www.youtube.com/embed/SWdR9H7Y9u8?si=gQOZrkdojnGJF_0L',
-          description: 'Balpreet Singh Ahluwalia, an Indian scientist working at The University of Tromsø in northern Norway, is changing the game. He is developing a small chip that can bypass the heavy instruments researchers use to observe the inside of living cells, called nanoscopes.',
-          thumbnailUrl: 'https://i.ytimg.com/vi/SWdR9H7Y9u8/maxresdefault.jpg',
+          title: 'INTERNSHALA COURSE REVIEW | Full Stack Development Placement Guarantee Course',
+          videoUrl: 'https://youtu.be/3G4wVPxDM60',
+          description: 'Are you considering enrolling in the Internshala Full Stack Development course but unsure if it is worth the investment?  In this video, we will talk to Taha, a student of Internshala’s Full Stack Development Course, who is now working as a Software Engineer at Samsung.This video will provide you with details of the course, explore its curriculum, teaching style, and student reviews to help you make an informed decision. Whether youre a recent graduate, college student or a fresher, this review will give you an honest and unbiased assessment of Internshalas Full Stack Development course. So, is it worth it? Watch to find out!',
+          thumbnailUrl: 'https://i.ytimg.com/an_webp/3G4wVPxDM60/mqdefault_6s.webp?du=3000&sqp=CNrn5sEG&rs=AOn4CLAAaMF0qMKGM2D_5uVa-U7sDXVDrA',
           category: 'science',
-          views: '285',
-          likes: '65',
-          dislikes: '4'
+          views: '218',
+          likes: '10',
+          dislikes: '1'
         },
         videoComment: [
           {
             commentData: {
-              text: 'thanks to balpreet singh aluwalia'
+              text: 'thanks for uploading'
             }
           },
           {
             commentData: {
-              text: 'we love balpreet'
+              text: 'we love Internshala'
             }
           },
           {
             commentData: {
-              text: 'indian scientists are great'
+              text: 'This courses are great'
             }
           },
           {
             commentData: {
-              text: 'great progress in science'
+              text: 'great'
             }
           },
           {
             commentData: {
-              text: 'he is saving money'
+              text: 'I love it'
             }
           },
           {
             commentData: {
-              text: 'india needs more scientists like him'
-            }
-          },
-          {
-            commentData: {
-              text: 'he made india proud'
-            }
-          },
-          {
-            commentData: {
-              text: 'i love science'
-            }
-          },
-          {
-            commentData: {
-              text: 'i am a medical student and i appreciate his research'
+              text: 'I want to join'
             }
           },
           {
@@ -1194,75 +848,60 @@ export const channelsData = [
       },
       {
         videoData: {
-          title: 'Talking Rocket Science with Ann Devereaux of NASA | The Quint',
-          videoUrl: 'https://www.youtube.com/embed/V-0-VAOsCYQ?si=cJ5DrKQG7Vyoxu1O',
-          description: 'NASA Flight System Engineer Ann Devereaux, who was part of the 2012 Curiosity Mission to Mars and is working on NASAs next Mars Mission, was in New Delhi recently. We caught up with her to literally talk about rocket science, Chandrayaan and everything space.',
-          thumbnailUrl: 'https://i.ytimg.com/vi/V-0-VAOsCYQ/maxresdefault.jpg',
-          category: 'science',
-          views: '154',
-          likes: '44',
+          title: 'How She Became a Product Manager With a B.Com Degree',
+          videoUrl: 'https://youtu.be/ssi2uBOpOYI',
+          description: 'To know review of Internshala Course in Product Management, then you need to hear Rabia’s story.She enrolled in Internshala’s Product Management Placement Guarantee Course, and just after completing it, she landed a job as a Customer Relationship Manager at Infynix Communications Ltd. in Bangalore with a package of ₹7.23 LPA. Her journey is proof that with the right guidance and dedication, your dream role is achievable.',
+          thumbnailUrl: 'https://i.ytimg.com/an_webp/ssi2uBOpOYI/mqdefault_6s.webp?du=3000&sqp=CNjl5sEG&rs=AOn4CLBd5t1KTp6_tj2j7tdb72anOE6R4Q',
+          category: 'Education',
+          views: '6699',
+          likes: '92',
           dislikes: '3'
         },
         videoComment: [
           {
             commentData: {
-              text: 'what a rocket science'
+              text: 'thanks for uploading'
             }
           },
           {
             commentData: {
-              text: 'usa spends lots of money on nasa'
+              text: 'we love Internshala'
             }
           },
           {
             commentData: {
-              text: 'sunita william is indian'
+              text: 'This courses are great'
             }
           },
           {
             commentData: {
-              text: 'isro is great'
+              text: 'great'
             }
           },
           {
             commentData: {
-              text: 'thanks to the quint'
+              text: 'I love it'
             }
           },
           {
             commentData: {
-              text: 'thank you ann devereaux'
+              text: 'I want to join'
             }
           },
           {
             commentData: {
-              text: 'great information'
-            }
-          },
-          {
-            commentData: {
-              text: 'i also want to join nasa'
-            }
-          },
-          {
-            commentData: {
-              text: 'i work in isro'
-            }
-          },
-          {
-            commentData: {
-              text: 'she is absolutely right'
+              text: 'keep it up'
             }
           }
         ]
       },
       {
         videoData: {
-          title: 'The Quint: Politics is to Make Money, Fool People, Says Independent Candidate',
-          videoUrl: 'https://www.youtube.com/embed/uWQcTGGPTRE?si=FTE0vA-njvtkfs9G',
-          description: 'The election season is upon us and from Prime Minister Narendra Modi to Congress Vice President Rahul Gandhi, everyone is busy making election promises to the voters. However, Gopal Chaudhary, one of the independent candidates from Agra constituency, has a different approach.',
-          thumbnailUrl: 'https://i.ytimg.com/vi/uWQcTGGPTRE/maxresdefault.jpg',
-          category: 'politics',
+          title: 'INTERNSHALA COURSE REVIEW | Digital Marketing Placement Guarantee Course',
+          videoUrl: 'https://youtu.be/hLd-emDpHEk',
+          description: 'A student of Internshala Digital Marketing Placement Guarantee Course will share his honest review.This video will provide you with details of the course, explore its curriculum, teaching style, and student reviews to help you make an informed decision. Whether you are a recent graduate, college student or a fresher, this review will give you an honest and unbiased assessment of Internshala Digital Marketing course. So, is it worth it? Watch to find out!',
+          thumbnailUrl: 'https://i.ytimg.com/an_webp/hLd-emDpHEk/mqdefault_6s.webp?du=3000&sqp=CKnQ5sEG&rs=AOn4CLCINauC9u4I0zIhev_e-V0ltW3pHw',
+          category: 'Education',
           views: '1417',
           likes: '40',
           dislikes: '1'
@@ -1270,52 +909,37 @@ export const channelsData = [
         videoComment: [
           {
             commentData: {
-              text: 'i will vote for him'
+              text: 'thanks for uploading'
             }
           },
           {
             commentData: {
-              text: 'very honest'
+              text: 'we love Internshala'
             }
           },
           {
             commentData: {
-              text: 'he is inspired from modi ji'
+              text: 'This courses are great'
             }
           },
           {
             commentData: {
-              text: 'he will win the election'
+              text: 'great'
             }
           },
           {
             commentData: {
-              text: 'all politicians should learn honesty from him'
+              text: 'I love it'
             }
           },
           {
             commentData: {
-              text: 'he will ask officers how to make money'
+              text: 'I want to join'
             }
           },
           {
             commentData: {
-              text: 'its all money'
-            }
-          },
-          {
-            commentData: {
-              text: 'he is copying samajwadi party'
-            }
-          },
-          {
-            commentData: {
-              text: 'where is he from'
-            }
-          },
-          {
-            commentData: {
-              text: 'is he really contesting'
+              text: 'keep it up'
             }
           }
         ]
@@ -1450,167 +1074,158 @@ export const channelsData = [
       },
       {
         videoData: {
-          title: 'Janab, Aise Kaise | PM Modi Convoy Blocked: No Accountability Despite Death Threat Claims',
-          videoUrl: 'https://www.youtube.com/embed/Ixh2MaDMR0s?si=q79PhF_qwJuNLXs-',
-          description: 'Despite death threat to PM Modi claims, following the blocking of his convoy in #Punjab on 5 January, there is no accountability. How was there a security breach? Who is responsible? We ask 10 big questions.',
-          thumbnailUrl: 'https://i.ytimg.com/vi/Ixh2MaDMR0s/maxresdefault.jpg',
-          category: 'satire',
-          views: '1907',
-          likes: '53',
-          dislikes: '11'
+          title: 'Google Interview Questions & Answers For Freshers | HR & Technical Round',
+          videoUrl: 'https://youtu.be/0xkOMmEWsi0',
+          description: `In this video, we break down Google's recruitment process, common Google interview questions, and expert tips to helpyou ace your interview.Key Topics:5 steps of the Google recruitment processCommon interview question types (HR & Tech Rounds)-3 essential tips for Google interview successDon't just memorize answers; learn to apply your knowledge effectively. Watch till the end and subscribe for more valuable career advice!`,
+          thumbnailUrl: 'https://i.ytimg.com/an_webp/0xkOMmEWsi0/mqdefault_6s.webp?du=3000&sqp=CLfN5sEG&rs=AOn4CLDoaHmUXrU6vp9UcN5lbfFpP7zqgg',
+          category: 'Education',
+          views: '4400',
+          likes: '120',
+          dislikes: '6'
         },
         videoComment: [
           {
             commentData: {
-              text: 'PM safety is first'
+              text: 'thanks for uploading'
             }
           },
           {
             commentData: {
-              text: 'this is a security lapse'
+              text: 'we love Internshala'
             }
           },
           {
             commentData: {
-              text: 'i love modi'
+              text: 'This courses are great'
             }
           },
           {
             commentData: {
-              text: 'congress can not give security to prime minister'
+              text: 'great'
             }
           },
           {
             commentData: {
-              text: 'modi is a great leader'
+              text: 'I love it'
             }
           },
           {
             commentData: {
-              text: 'good questions raised'
+              text: 'I want to join'
             }
           },
           {
             commentData: {
-              text: 'this should not repeat again'
-            }
-          },
-          {
-            commentData: {
-              text: 'channi is responsible'
-            }
-          },
-          {
-            commentData: {
-              text: 'who did this'
-            }
-          },
-          {
-            commentData: {
-              text: 'how is it possible'
+              text: 'keep it up'
             }
           }
         ]
       },
+    ]
+  },
+    {
+    channelData: {
+      channelName: 'Sony SAB',
+      description: 'Official Account of Sony SAB, a leading Hindi GEC within Sony Pictures Networks. Its the Home of good content committed to diverse storytelling & evoking real emotions. We believe in Jo roz choti khushiya dete hai, wohi rishtey toh bade hote hai',
+      channelBanner: 'https://yt3.googleusercontent.com/txWpKJQ3hO7z7WShtA14ej5Y5rG5INZfCiH9FXkI1hU-K4qhxKJaxZirTMQKvWS8v1WHuetrs1Q=w1060-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj',
+      channelLogo: 'https://yt3.googleusercontent.com/W6hlyHF8FP_YVLnkzBGQYtdpf0hB8pILZvQYw4jMYIqgcGeS1RBTvk9VHUXGk3mDZhhv-26o-zc=s160-c-k-c0x00ffffff-no-rj',
+      subscribers: 101000
+    },
+    channelVideo: [
       {
         videoData: {
-          title: 'A Brief History of Yoga: From Vedas to Vegas - The Quint',
-          videoUrl: 'https://www.youtube.com/embed/wsXwau1nFOs?si=6-oahWsVlfeCPpzj',
-          description: 'When did yoga really go international? Wait, when did yoga get here in the first place? The Quint dug deep into the 3500-year-old history of yoga to find out.',
-          thumbnailUrl: 'https://i.ytimg.com/vi/wsXwau1nFOs/sddefault.jpg',
-          category: 'history',
-          views: '828',
-          likes: '76',
-          dislikes: '9'
-        },
-        videoComment: [
-          {
-            commentData: {
-              text: 'yoga is the best'
-            }
-          },
-          {
-            commentData: {
-              text: 'i do yoga everyday'
-            }
-          },
-          {
-            commentData: {
-              text: 'we should do yoga regularly'
-            }
-          },
-          {
-            commentData: {
-              text: 'yoga is very helpful'
-            }
-          },
-          {
-            commentData: {
-              text: 'ramdev is the best yoga guru'
-            }
-          },
-          {
-            commentData: {
-              text: 'i learn yoga from shilpa shetty'
-            }
-          },
-          {
-            commentData: {
-              text: 'yoga and ayurved are our pride'
-            }
-          },
-          {
-            commentData: {
-              text: 'we are proud of our yoga gurus'
-            }
-          },
-          {
-            commentData: {
-              text: 'yoga is international now'
-            }
-          },
-          {
-            commentData: {
-              text: 'i want to learn yoga'
-            }
-          }
-        ]
-      },
-      {
-        videoData: {
-          title: 'Cradled in Khayaal, the Mind Begins to Wander | Urdunama Podcast | The Quint',
-          videoUrl: 'https://www.youtube.com/embed/zBJgib6eBXs?si=RKH4lWqKi_XPUwy8',
-          description: 'Khayal means thought—a fleeting whisper of the mind, soft as mist, yet powerful enough to stir oceans within. It is where memory meets imagination, where reality bends gently into reverie. Khayal does not follow rules; it flows, drifts, pauses, and returns when you least expect it.',
-          thumbnailUrl: 'https://i.ytimg.com/vi/zBJgib6eBXs/maxresdefault.jpg',
-          category: 'literature',
-          views: '617',
-          likes: '38',
+          title: 'Jetha को मिला College के Admission का Shortcut | Taarak Mehta Ka Ooltah Chashmah | College Admission',
+          videoUrl: 'https://youtu.be/0Y0013hFIzA',
+          description: 'Jethalal with a boost of courage leaves to meet Taarak at the college to expose the notorious activities of Setting Bhai. Reaching the canteen where Setting Bhai is, Jethalal and Taarak approach him and offer to pay him any sum of money for the admission. Nattu Kaka and Bagha get the cash to Jethalas house and they both are extremely proud of Jethalal when they learn about the purpose of the cash.',
+          thumbnailUrl: 'https://i.ytimg.com/an_webp/0Y0013hFIzA/mqdefault_6s.webp?du=3000&sqp=CKDo5cEG&rs=AOn4CLCUnEoPe0YFlbNCZwduqPdtebFuZQ',
+          category: 'Comedy',
+          views: '48',
+          likes: '30',
           dislikes: '2'
         },
         videoComment: [
           {
             commentData: {
-              text: 'i love urdu'
+              text: 'I love tmkocs'
             }
           },
           {
             commentData: {
-              text: 'khayal means thought'
+              text: 'Best show'
             }
           },
           {
             commentData: {
-              text: 'i use this word alot'
+              text: 'i love this '
             }
           },
           {
             commentData: {
-              text: 'i love urdunama'
+              text: 'very intresting'
             }
           },
           {
             commentData: {
-              text: 'i like your way of explaining'
+              text: 'i love it'
+            }
+          },
+          {
+            commentData: {
+              text: 'I watch daily'
+            }
+          },
+          {
+            commentData: {
+              text: 'please upload more such videos'
+            }
+          },
+          {
+            commentData: {
+              text: '❤️❤️❤️'
+            }
+          },
+          {
+            commentData: {
+              text: 'i feel very happy '
+            }
+          },
+          {
+            commentData: {
+              text: 'old episodes are gems'
+            }
+          }
+        ]
+      },
+      {
+        videoData: {
+          title: 'Pushpa Impossible',
+          videoUrl: 'https://youtu.be/aa3zWPBye3w',
+          description: 'Watch the recap of your favorite show, with all the new episodes. Here you can catch a glimpse of your favorite shows in just minutes in case you missed out on the fun. These recaps will highlight the best moments from the entire episode so that in case you missed watching the full show or the episode, you will be in the loop regardless! .',
+          thumbnailUrl: 'https://i.ytimg.com/an_webp/aa3zWPBye3w/mqdefault_6s.webp?du=3000&sqp=CLCQ5sEG&rs=AOn4CLBgYloEfM_iKanmjGMOZ63MowisTw',
+          category: 'Comedy',
+          views: '90',
+          likes: '9',
+          dislikes: '7'
+        },
+        videoComment: [
+          {
+            commentData: {
+              text: 'amazing video'
+            }
+          },
+          {
+            commentData: {
+              text: 'wow, i love this video'
+            }
+          },
+          {
+            commentData: {
+              text: 'its interesting video'
+            }
+          },
+          {
+            commentData: {
+              text: 'i love show'
             }
           },
           {
@@ -1620,154 +1235,203 @@ export const channelsData = [
           },
           {
             commentData: {
-              text: 'i want to learn urdu'
+              text: 'love from bihar'
             }
           },
           {
             commentData: {
-              text: 'i know urdu little bit'
+              text: 'not interesting'
             }
           },
           {
             commentData: {
-              text: 'urdu is the language of india'
+              text: 'oh my god'
             }
           },
           {
             commentData: {
-              text: 'lucknow is the center of urdu'
+              text: 'is it really possible'
             }
           }
         ]
       },
       {
         videoData: {
-          title: 'Podcast | Understanding ‘Rahm’ With A Little Help From Shakespeare | Urdunama | The Quint',
-          videoUrl: 'https://www.youtube.com/embed/FgR6w-4JrdI?si=sLKGLOWhLkarNY0_',
-          description: 'Mercy, compassion, empathy, are not just words but remedies, too, in these trying times. To understand the much-needed virtue of Rahm, we turn to poetry and invoke Shakespeare through the monologue in the Merchant of Venice, The Quality of Mercy. But what is mercy without empathy? Perhaps understanding the idea of pain could explain that.',
-          thumbnailUrl: 'https://i.ytimg.com/vi/FgR6w-4JrdI/maxresdefault.jpg',
-          category: 'literature',
-          views: '375',
-          likes: '16',
-          dislikes: '1'
+          title: 'Popatlal को नहीं करना Dr. Hathi से इलाज | Taarak Mehta Ka Ooltah Chashmah | Popatlal Ki Treatment',
+          videoUrl: 'https://youtu.be/wxxramqrY0M',
+          description: `Popatlal is forcefully taken to Dr. Hathi's clinic for treatment but is still furious with him. A Man comes to Gokuldham with his daughter to consult Dr. Hathi for her daughter's marriage. Popatlal's anger vanishes instantly. Popatlal feels sad on realizing that the girl he was planning to marry loves someone else. Tapu Sena while playing cricket break Bhide's Uncle's car and he leaves angrily without visiting Bhide's house.`,
+          thumbnailUrl: 'https://i.ytimg.com/an_webp/wxxramqrY0M/mqdefault_6s.webp?du=3000&sqp=CJXi5cEG&rs=AOn4CLAh1cQOhXCycEvffrcqZyrUPQoVfg',
+          category: 'Comedy',
+          views: '55',
+          likes: '15',
+          dislikes: '2'
         },
         videoComment: [
           {
             commentData: {
-              text: 'urdu is a very sweet language'
+              text: 'I love tmkocs'
             }
           },
           {
             commentData: {
-              text: 'i want to learn writing urdu'
+              text: 'Best show'
             }
           },
           {
             commentData: {
-              text: 'i love urdu poems'
+              text: 'i love this '
             }
           },
           {
             commentData: {
-              text: 'jaun eliya is my favourite urdu poet'
+              text: 'very intresting'
             }
           },
           {
             commentData: {
-              text: 'i read ghalib alot'
+              text: 'i love it'
             }
           },
           {
             commentData: {
-              text: 'javed akhtar poems are very good'
+              text: 'I watch daily'
             }
           },
           {
             commentData: {
-              text: 'i like your podcast'
+              text: 'please upload more such videos'
             }
           },
           {
             commentData: {
-              text: 'i like the quint'
+              text: 'old episodes are gems'
             }
           },
           {
             commentData: {
-              text: 'i am learning urdu'
+              text: 'i feel very happy '
             }
           },
-          {
-            commentData: {
-              text: 'urdu is mixture of hindi and farsi'
-            }
-          }
         ]
       },
       {
         videoData: {
-          title: 'Podcast | Company of a Few Good Poets: Antidote If You Are Feeling ‘Tanha’ | The Quint',
-          videoUrl: 'https://www.youtube.com/embed/F1i0_wK67no?si=wXPkJqQuhMJzb_Xt',
-          description: 'Talking about being tanha is something most of us feel as the pandemic has indeed taken a toll on each of ours mental health. Tune in as Fabeha Syed reads Parveen Shakir, Faiz Ahmad Faiz, Ahmad Nadeem Qasmi, Munir Niyazi, and other poets to explore the theme of loneliness in Urdu poetry.',
-          thumbnailUrl: 'https://i.ytimg.com/vi/F1i0_wK67no/maxresdefault.jpg',
-          category: 'literature',
-          views: '132',
-          likes: '61',
-          dislikes: '7'
+          title: `Wagle Ki Duniya | वागले की दुनिया | Ep 1301 | Coming Up Next`,
+          videoUrl: 'https://youtu.be/r39NOvxokmw',
+          description: 'The Lallantop has team and left to cover Loksabha Elections 2024. Watch the video to know where Saurabh Dwivedi, Abhinav Pandey, Sonal Pateria, Nikhil Wath, Siddhant Mohan and others are coming.',
+          thumbnailUrl: 'https://i.ytimg.com/an_webp/r39NOvxokmw/mqdefault_6s.webp?du=3000&sqp=CIyc5sEG&rs=AOn4CLAB5507GR26_cyTaR2jreQH6rgxmw',
+          category: 'comedy',
+          views: '40287',
+          likes: '472',
+          dislikes: '13'
         },
         videoComment: [
           {
             commentData: {
-              text: 'i love tanhai'
+              text: 'I love tmkocs'
             }
           },
           {
             commentData: {
-              text: 'i always want some tanhai'
+              text: 'Best show'
             }
           },
           {
             commentData: {
-              text: 'tanhai means loneliness'
+              text: 'i love this '
             }
           },
           {
             commentData: {
-              text: 'i need it some time'
+              text: 'very intresting'
             }
           },
           {
             commentData: {
-              text: 'urdu is my favourite language'
+              text: 'i love it'
             }
           },
           {
             commentData: {
-              text: 'mir anees is the god of urdu'
+              text: 'I watch daily'
             }
           },
           {
             commentData: {
-              text: 'mir anees used this word alot'
+              text: 'please upload more such videos'
             }
           },
           {
             commentData: {
-              text: 'i want to learn to reading nastaliq'
+              text: '❤️❤️❤️'
             }
           },
           {
             commentData: {
-              text: 'krishna bihari noor was a very good urdu poet'
+              text: 'i feel very happy '
             }
           },
-          {
-            commentData: {
-              text: 'kunwar mahidar singh bedi is my favourite urdu poet'
-            }
-          }
         ]
-      }
+      },
+      {
+        videoData: {
+          title: 'Tenali Rama | Ep 141 & Ep 142 | RECAP | तेनाली रामा',
+          videoUrl: 'https://youtu.be/hxgNCfag_nU',
+          description: 'Watch the recap of your favorite show, with all the new episodes. Here you can catch a glimpse of your favorite shows in just minutes in case you missed out on the fun. These recaps will highlight the best moments from the entire episode so that in case you missed watching the full show or the episode, you will be in the loop regardless! ',
+          thumbnailUrl: 'https://i.ytimg.com/an_webp/hxgNCfag_nU/mqdefault_6s.webp?du=3000&sqp=CLWi5sEG&rs=AOn4CLAlQr0O3Pc66KKdXQboeaaGWwb8jg',
+          category: 'Comedy',
+          views: '565',
+          likes: '23',
+          dislikes: '9'
+        },
+        videoComment: [
+          {
+            commentData: {
+              text: 'I love tmkocs'
+            }
+          },
+          {
+            commentData: {
+              text: 'Best show'
+            }
+          },
+          {
+            commentData: {
+              text: 'i love this '
+            }
+          },
+          {
+            commentData: {
+              text: 'very intresting'
+            }
+          },
+          {
+            commentData: {
+              text: 'i love it'
+            }
+          },
+          {
+            commentData: {
+              text: 'I watch daily'
+            }
+          },
+          {
+            commentData: {
+              text: 'please upload more such videos'
+            }
+          },
+          {
+            commentData: {
+              text: '❤️❤️❤️'
+            }
+          },
+          {
+            commentData: {
+              text: 'i feel very happy '
+            }
+          },
+        ]
+      },
     ]
   },
   {

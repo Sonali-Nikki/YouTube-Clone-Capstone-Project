@@ -1,9 +1,9 @@
-// importing necessary models
 import Channel from "../models/channelModel.js";
 import Video from "../models/videoModel.js";
 import Comment from "../models/commentModel.js"
 
-// controller to upload video to a channel if the user is signed in
+
+
 export const uploadVideo = async (req, res) => {
   const { title, videoUrl, description, thumbnailUrl, category, views, likes, dislikes, channel } = req.body;
   try {
@@ -20,19 +20,18 @@ export const uploadVideo = async (req, res) => {
       uploader: req.user._id,
       comments: []
     });
-
     await newVideo.save();
     const channel_ = await Channel.findById(channel);
     channel_.videos.unshift(newVideo._id);
     await channel_.save();
-
     res.status(201).json(newVideo);
   } catch (err) {
     res.status(500).json({ message: 'Failed to upload video', error: err.message });
   }
 };
 
-// controller to edit a video if the owner is signed in
+
+
 export const editVideo = async (req, res) => {
   const { title, videoUrl, description, thumbnailUrl, category, views, likes, dislikes } = req.body;
   try {
@@ -50,7 +49,6 @@ export const editVideo = async (req, res) => {
       },
       { new: true }
     );
-
     if (!video) return res.status(404).json({ message: 'Video does not exist' });
     res.json(video);
   } catch (err) {
@@ -58,11 +56,11 @@ export const editVideo = async (req, res) => {
   }
 };
 
-// controller to delete a video if the owner is signed in
+
+
 export const deleteVideo = async (req, res) => {
   try {
     const video = await Video.findByIdAndDelete(req.params.videoId);
-    
     if (!video) return res.status(404).json({ message: 'Video does not exist' });
     const channel = await Channel.findById(video.channel);
     const index = channel.videos.indexOf(video._id);
@@ -75,7 +73,8 @@ export const deleteVideo = async (req, res) => {
   }
 };
 
-// controller to get a video by id
+
+
 export const getVideoById = async (req, res) => {
   try {
     const video = await Video.findById(req.params.videoId).populate({ path: 'comments', populate: { path: 'user', select: 'username avatar' } }).populate({ path: 'channel', select: 'channelName channelLogo subscribers' });
@@ -87,7 +86,8 @@ export const getVideoById = async (req, res) => {
   }
 };
 
-// controller to get all the videos
+
+
 export const getAllVideos = async (req, res) => {
   try {
     const videos = await Video.find({}).populate({ path: 'channel', select: 'channelName channelLogo' });

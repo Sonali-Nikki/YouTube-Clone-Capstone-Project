@@ -15,7 +15,6 @@ async function protect(req, res, next) {
       return res.status(401).json({ message: 'Unauthorized: Invalid token' });
     }
   }
-
   if (!token) {
     return res.status(401).json({ message: 'Unauthorized: No token provided' });
   }
