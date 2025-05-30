@@ -14,7 +14,7 @@
 
  GitHub Link
 
-[https://github.com/Sonali-Nikki/Youtube-clone]
+[https://github.com/Sonali-Nikki/YouTube-Clone-Capstone-Project.git]
 
 
  DemoVideo Link
