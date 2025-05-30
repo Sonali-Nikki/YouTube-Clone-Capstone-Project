@@ -1,4 +1,3 @@
-// importing necessary hooks and components
 import { useState, useRef } from "react";
 import { BiLike } from "react-icons/bi";
 import { BiDislike } from "react-icons/bi";
@@ -8,26 +7,17 @@ import { RiDeleteBin6Line } from "react-icons/ri";
 import { MdOutlineOutlinedFlag } from "react-icons/md";
 
 function CommentItem({ comment, thisComment, setThisComment, render, setRender }) {
-
-// getting token from localStorage
-    const token = localStorage.getItem("token");
-  
-  // state variables to store the username and avatar
   const [username, setUsername] = useState(localStorage.getItem("username") || "");
   const [avatar, setAvatar] = useState(localStorage.getItem("avatar") || "");
-  
-  // state variable to store comment menu status and edit status
   const [menu, setMenu] = useState(false);
   const [edit, setEdit] = useState(false);
-  
-  // state to store edit comment input
   const [commentText, setCommentText] = useState(comment.text);
+  const textAreaRef = useRef(null);
+
+  const token = localStorage.getItem("token");
   
-  // reference variable to store the reference of edit comment input
-    const textAreaRef = useRef(null);
-  
-// function to resize the edit comment input as per the number of lines
-  const autoResize = (e) => {
+
+      const autoResize = (e) => {
         const el = textAreaRef.current;
         if (el) {
           el.style.height = 'auto';
@@ -36,8 +26,9 @@ function CommentItem({ comment, thisComment, setThisComment, render, setRender }
         setCommentText(e.target.value);
       };
   
-// function to submit edit comment
-  async function handleSubmit(e) {
+
+
+      async function handleSubmit(e) {
     e.preventDefault();
     const text = e.target[0].value;
     try {
@@ -58,7 +49,7 @@ function CommentItem({ comment, thisComment, setThisComment, render, setRender }
     }
   }
 
-// function to delete the comment
+
   async function deleteComment() {
     try {
       const res = await fetch(`http://localhost:5000/api/comment/${comment._id}`, {
@@ -72,24 +63,24 @@ function CommentItem({ comment, thisComment, setThisComment, render, setRender }
     }
   }
   
-// function to open edit comment
-    function editComment() {
+
+  function editComment() {
       setEdit(true);
     }
 
-// function to close edit comment
-  function handleCancel() {
+
+    function handleCancel() {
     setEdit(false);
     setMenu(false);
   }
 
-// function to toggle comment menu
+
   function toggleMenu() {
     setMenu(!menu);
     setThisComment(comment._id);
   }
 
-// rendering the comment item with the user avatar and username and comment menu
+
   return (
     <>
     {!edit?(

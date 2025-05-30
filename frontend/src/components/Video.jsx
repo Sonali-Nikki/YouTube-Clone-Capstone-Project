@@ -1,4 +1,3 @@
-// importing necessary hooks and components
 import { useState, useEffect, useRef } from "react";
 import { useParams, Link } from "react-router-dom";
 import { BiLike } from "react-icons/bi";
@@ -10,14 +9,17 @@ import SuggestionItem from "./SuggestionItem";
 import useFetchVideos from "../utils/useFetchVideos";
 
 function Video({ avatar }) {
+    const [notification, setNotification] = useState(false);
+    const [thisComment, setThisComment] = useState("");
+    const { videoId } = useParams();
+    const [video, setVideo] = useState(null);
+    const [error, setError] = useState(null);
+    const [render, setRender] = useState(true);
 
-// getting token from localStorage
   const token = localStorage.getItem("token");
 
-// reference variable store the reference of add comment input
     const textAreaRef = useRef(null);
 
-// function to resize the add comment input as per the number of lines
     const autoResize = () => {
       const el = textAreaRef.current;
       if (el) {
@@ -26,26 +28,13 @@ function Video({ avatar }) {
       }
     };
 
-// state variables to store the notification status and clicked comment
-    const [notification, setNotification] = useState(false);
-    const [thisComment, setThisComment] = useState("");
+
   
-// retriving video id using useParams hook
-  const { videoId } = useParams();
-  
-// scroll to the top of the window when the video is changed
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [videoId]);
 
-// state variables to store the video and error
-  const [video, setVideo] = useState(null);
-  const [error, setError] = useState(null);
   
-// state variable to trigger re-rendering
-  const [render, setRender] = useState(true);
-  
-// fetching the video
   useEffect(() => {
     fetch(`http://localhost:5000/api/video/${videoId}`)
     .then((response) => response.json())
@@ -53,16 +42,15 @@ function Video({ avatar }) {
     .catch((err) => setError(err.message));
   }, [videoId, render]);
 
-// fetching the videos for suggestions
   const { videos } = useFetchVideos();
 
-// filtering the videos for suggestion having channel or category same as video
+
   let filteredVideos;
   if(video){
     filteredVideos = videos.filter(video_ => (video_.channel._id==video.channel._id || video_.category==video.category) && video_._id!=video._id);
   }
 
-// function to submit the add comment if the user is signed in and render the first sign in notification otherwise
+
   async function handleSubmit(e) {
     e.preventDefault();
     const text = e.target[0].value;
@@ -90,11 +78,13 @@ function Video({ avatar }) {
     }
   }
 
-// rendering appropriate message
+
+
   if (error) return <p className="status-msg">Error: {error}</p>;
   if (!video) return <p className="status-msg">Loading video...</p>;
 
-// rendering video with video details, channel logo, channel name, add comment box, comments and suggestion videos
+
+
   return (
     <div className="video-content">
     <div className="video">

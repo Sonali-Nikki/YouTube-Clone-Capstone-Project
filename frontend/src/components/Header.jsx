@@ -1,4 +1,3 @@
-// importing necessary hooks and components
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import UserMenu from "./UserMenu";
@@ -12,41 +11,32 @@ import { RxAvatar } from "react-icons/rx";
 import { GoBell } from "react-icons/go";
 
 function Header({ sidebar, setSidebar, setSearch, signedIn, setSignedIn, username, setUsername, avatar, setAvatar }) {
-
-// state variable to store the text in the search box
   const [searchText, setSearchText] = useState("");
-
-// state variables to store the usermenu status, signin form status and register form status
   const [userMenu, setUserMenu] = useState(false);
   const [signin, setSignin] = useState(false);
   const [register, setRegister] = useState(false);
 
-// using useNavigate hook
+
   const navigate = useNavigate();
 
-// function to toggle sidebar
   function toggleSidebar() {
     setSidebar(!sidebar);
   }
 
-// function to search the video with input text
   function searchVideo() {
     setSearch(searchText);
     navigate('/');
   }
 
-// function to toggle usermenu
   function toggleUserMenu() {
     setUserMenu(!userMenu);
   }
 
-// function to open signin form
   function openSignIn() {
     setSignin(true);
     setRegister(false);
   }
 
-// rendering header with sidebar button, youtube logo, search box and user or sign in button
   return (
     <header className="header-content">
       <div className="left-header">

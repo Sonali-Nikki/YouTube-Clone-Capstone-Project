@@ -1,31 +1,9 @@
-// importing necessary hooks and components
 import { useState } from "react";
 import { IoMdClose } from "react-icons/io";
 import { Link } from "react-router-dom";
 
 function VideoItem({ video, render, setRender }) {
-
-// getting token from localStorage
-    const token = localStorage.getItem("token");
-
-// function to delete video
-    async function deleteVideo() {
-    await fetch(`http://localhost:5000/api/video/${video._id}`, {
-      method: 'DELETE',
-      headers: {
-        Authorization: `JWT ${token}`,
-      },
-    });
-    setRender(!render);
-    }
-
     const [editForm, setEditForm] = useState(false);
-
-    function editVideo() {
-        setEditForm(true);
-    }
-
-// state variable to store the edit video from data
     const [editData, setEditData] = useState({
     title: `${video.title}`,
     videoUrl: `${video.videoUrl}`,
@@ -39,12 +17,30 @@ function VideoItem({ video, render, setRender }) {
   });
   const [editError, setEditError] = useState('');
 
-// function to update edit from data when the user types
+
+    const token = localStorage.getItem("token");
+
+    async function deleteVideo() {
+    await fetch(`http://localhost:5000/api/video/${video._id}`, {
+      method: 'DELETE',
+      headers: {
+        Authorization: `JWT ${token}`,
+      },
+    });
+    setRender(!render);
+    }
+
+
+    function editVideo() {
+        setEditForm(true);
+    }
+
+
+
   function editChange(e) {
     setEditData({ ...editData, [e.target.name]: e.target.value });
   };
 
-// function to submit edit video from
   async function editSubmit(e) {
     e.preventDefault();
     try {
@@ -64,12 +60,10 @@ function VideoItem({ video, render, setRender }) {
     }
   };
 
-// function to close edit video form
     function close() {
         setEditForm(false);
      }
 
-// rendering video item with video data and delete video button and edit video button
     return (
         <div className="video-item-content">
             <div className="video-item-details">

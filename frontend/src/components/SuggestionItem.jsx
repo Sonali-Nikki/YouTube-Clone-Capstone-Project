@@ -1,10 +1,8 @@
-// importing necessary components
 import { Link } from "react-router-dom";
 import { BsThreeDotsVertical } from "react-icons/bs";
 
 function SuggestionItem({ video }) {
 
-// rendering suggestion item with video thumbnail, video title, channel name and views
   return (
     <div className="suggestion-item">
       <Link to={`/video/${video._id}`}>

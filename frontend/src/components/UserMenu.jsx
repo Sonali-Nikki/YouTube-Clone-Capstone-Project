@@ -1,14 +1,21 @@
-// importing necessary hooks and components
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { IoMdClose } from "react-icons/io";
 
 function UserMenu({ setSignedIn, setUsername, setAvatar, setUserMenu }) {
+  const [channelForm, setChannelForm] = useState(false);
+    const [formData, setFormData] = useState({
+    channelName: '',
+    description: '',
+    channelBanner: '',
+    channelLogo: '',
+    subscribers: ''
+  });
+  const [error, setError] = useState('');
 
-// using useNavigate hook
+
   const navigate = useNavigate();
 
-// function to signout
   function signout() {
     localStorage.clear();
     setSignedIn(false);
@@ -18,33 +25,20 @@ function UserMenu({ setSignedIn, setUsername, setAvatar, setUserMenu }) {
     navigate('/');
   };
 
-// state variable to store create channel form status
-  const [channelForm, setChannelForm] = useState(false);
 
-// function to open create channel form
   function createChannel() {
     setChannelForm(true);
   }
 
-// state variables to store create channel form data and error
-  const [formData, setFormData] = useState({
-    channelName: '',
-    description: '',
-    channelBanner: '',
-    channelLogo: '',
-    subscribers: ''
-  });
-  const [error, setError] = useState('');
 
-// function to update form data when the user types
+
   function handleChange(e) {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-// getting the token from localStorage
   const token = localStorage.getItem("token");
 
-// function to submit the create channel form
+
   async function handleSubmit(e) {
     e.preventDefault();
     try {
@@ -63,18 +57,17 @@ function UserMenu({ setSignedIn, setUsername, setAvatar, setUserMenu }) {
     }
   };
 
-// function to close the create channel form
+
   function close() {
     setChannelForm(false);
   }
 
-// function to navigate to manage channel page
   function manageChannels() {
     navigate('/manageChannels');
     setUserMenu(false);
   }
   
-// rendering usermenu with signout button, create channel button and manage channel button
+
   return (
     <div className="usermenu-content">
       <button className="usermenu-btn" onClick={signout}>Sign out</button>

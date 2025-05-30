@@ -1,19 +1,15 @@
-// importing necessary hooks and components
 import { useState } from 'react';
 import { IoMdClose } from "react-icons/io";
 
 function SignIn({ setSignin, setRegister, setSignedIn, setUsername, setAvatar }) {
-
-// state variable to store sign in form data and error
     const [formData, setFormData] = useState({ username: '', password: '' });
     const [error, setError] = useState('');
 
-// function to update form data when the user types
+
     function handleChange(e) {
     setFormData({ ...formData, [e.target.name]: e.target.value });
     }
 
-// function to submit sign in form
     async function handleSubmit(e) {
     e.preventDefault();
     try {
@@ -41,18 +37,16 @@ function SignIn({ setSignin, setRegister, setSignedIn, setUsername, setAvatar })
     }
   };
 
-// function to close form
-    function close() {
+
+  function close() {
         setSignin(false);
     }
 
-// function to toggle between sign in form and register form
     function toggle() {
         setSignin(false);
         setRegister(true);
     }
 
-// rendering sign in form
     return (
         <div className="signin-register-content">
             <IoMdClose size={20} onClick={close} className='cross' />

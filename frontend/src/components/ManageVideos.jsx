@@ -1,25 +1,19 @@
-// importing necessary hooks and components
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom"
 import VideoItem from "./VideoItem";
 
 function ManageVideos() {
-
-// retrieving the parameter using useParams hook
-  const { channelId } = useParams();
-
-// state variables to store the channel having videos, loading status and error
   const [channel, setChannel] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
-// state variable to trigger re-rendering
   const [render, setRender] = useState(true);
 
-// getting token from localStoraage
+  const { channelId } = useParams();
+
+
   const token = localStorage.getItem("token");
 
-// fetching the channel having videos
+
   useEffect(() => {
       fetch(`http://localhost:5000/api/channel/${channelId}`, {
         method: "GET",
@@ -31,12 +25,14 @@ function ManageVideos() {
       .finally(() => setLoading(false));
     }, [render]);
 
-// rendering appropriate message
-  if (loading) return <p className="status-msg">Loading videos...</p>;
+
+
+    if (loading) return <p className="status-msg">Loading videos...</p>;
   if (error) return <p className="status-msg">Error: {error}</p>;
   if (channel.videos.length==0) return <p className="status-msg">No videos uploaded yet</p>;
 
-// rendering manage videos with channel info and all the videoItems
+
+
   return (
     <div className="manage-videos-content">
       <img src={channel.channelBanner || 'fallback'} alt="banner" onError={(e) => e.target.src='https://dynamic.brandcrowd.com/template/preview/design/72a2045d-5feb-4f92-b1ec-70cef5ad56b0?v=4&designTemplateVersion=2&size=design-preview-wide-1x'} className="channel-item-banner" />

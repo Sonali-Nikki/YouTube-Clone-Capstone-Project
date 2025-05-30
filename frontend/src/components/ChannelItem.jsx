@@ -1,18 +1,39 @@
-// importing necessary hooks and components
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { IoMdClose } from "react-icons/io";
 
-function ChannelItem({ channel, render, setRender }) {    
+function ChannelItem({ channel, render, setRender }) {   
+  const [editForm, setEditForm] = useState(false);
+  const [editData, setEditData] = useState({
+    channelName: `${channel.channelName}`,
+    description: `${channel.description}`,
+    channelBanner: `${channel.channelBanner}`,
+    channelLogo: `${channel.channelLogo}`,
+    subscribers: `${channel.subscribers}`
+  });
+  const [editError, setEditError] = useState('');
+  const [uploadForm, setUploadForm] = useState(false);
+  const [uploadData, setUploadData] = useState({
+    title: '',
+    videoUrl: '',
+    description: '',
+    thumbnailUrl: '',
+    category: '',
+    views: '',
+    likes: '',
+    dislikes: '',
+    channel: `${channel._id}`
+  });
+  const [uploadError, setUploadError] = useState('');
 
-// using useNavigate hook
+ 
+
   const navigate = useNavigate();
 
-// getting token from localStorage
-    const token = localStorage.getItem("token");
+  const token = localStorage.getItem("token");
     
-// function to delete channel
-    async function deleteChannel() {
+
+  async function deleteChannel() {
         await fetch(`http://localhost:5000/api/channel/${channel._id}`, {
             method: 'DELETE',
             headers: {
@@ -22,30 +43,15 @@ function ChannelItem({ channel, render, setRender }) {
     setRender(!render);
 }
 
-// state variable to store edit channel form status
-const [editForm, setEditForm] = useState(false);
 
-// function to open edit channel form
 function editChannel() {
     setEditForm(true);
 }
 
-// state variables to store the edit channel from data and error
-const [editData, setEditData] = useState({
-    channelName: `${channel.channelName}`,
-    description: `${channel.description}`,
-    channelBanner: `${channel.channelBanner}`,
-    channelLogo: `${channel.channelLogo}`,
-    subscribers: `${channel.subscribers}`
-  });
-  const [editError, setEditError] = useState('');
-
-// function to update edit form data when the user types
   function editChange(e) {
     setEditData({ ...editData, [e.target.name]: e.target.value });
   };
 
-// function to submit the edit channel form
   async function editSubmit(e) {
     e.preventDefault();
     try {
@@ -65,34 +71,17 @@ const [editData, setEditData] = useState({
     }
   };
 
-// state variable to store the upload video form status
-const [uploadForm, setUploadForm] = useState(false);
 
-// function to open upload video form
 function uploadVideo() {
     setUploadForm(true);
 }
 
-// state variables to store upload video form data and error
-const [uploadData, setUploadData] = useState({
-    title: '',
-    videoUrl: '',
-    description: '',
-    thumbnailUrl: '',
-    category: '',
-    views: '',
-    likes: '',
-    dislikes: '',
-    channel: `${channel._id}`
-  });
-  const [uploadError, setUploadError] = useState('');
-
-// function to update the upload form data when the user types
   function uploadChange(e) {
     setUploadData({ ...uploadData, [e.target.name]: e.target.value });
   };
 
-// function to submit upload video form data
+
+
   async function uploadSubmit(e) {
     e.preventDefault();
     try {
@@ -101,10 +90,8 @@ const [uploadData, setUploadData] = useState({
         headers: { 'Content-Type': 'application/json', authorization: `JWT ${token}` },
         body: JSON.stringify(uploadData)
       });
-
       const data = await res.json();
       if (!res.ok) throw new Error(data.message || 'Video uploading failed');
-
       setUploadForm(false);
       setRender(!render);
     } catch (err) {
@@ -112,19 +99,20 @@ const [uploadData, setUploadData] = useState({
     }
   };
 
-// function to close the edit channel form and uploade video form
-function close() {
+
+
+  function close() {
     setEditForm(false);
     setUploadForm(false);
 }
 
-// function to navigate to manage video page
+
 function manageVideos() {
     navigate(`/manageVideos/${channel._id}`);
 }
 
-// rendering channel item with channel data and delete channel button, edit channel button, upload video button and manage videos button
-    return (
+
+return (
         <div className="channel-item-content">
             <img src={channel.channelBanner || 'fallback'} alt="banner" onError={(e) => e.target.src='https://dynamic.brandcrowd.com/template/preview/design/72a2045d-5feb-4f92-b1ec-70cef5ad56b0?v=4&designTemplateVersion=2&size=design-preview-wide-1x'} className="channel-item-banner" />
             <div className="channel-item-details">

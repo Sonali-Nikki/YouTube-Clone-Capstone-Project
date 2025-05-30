@@ -1,10 +1,8 @@
-// importing necessary components
 import { Link } from "react-router-dom";
 import { BsThreeDotsVertical } from "react-icons/bs";
 
 function VideoCard({ video }) {
 
-// rendering video card with video thumbnail, video tite, channel log channel name, and views
   return(
     <div className="video-card">
       <Link to={`/video/${video._id}`}>

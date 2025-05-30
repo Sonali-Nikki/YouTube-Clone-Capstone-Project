@@ -1,4 +1,3 @@
-// importing necessary components
 import { NavLink } from "react-router-dom";
 import { IoMdHome } from "react-icons/io";
 import { SiYoutubeshorts } from "react-icons/si";
@@ -26,7 +25,6 @@ import { RiFeedbackLine } from "react-icons/ri";
 
 function Sidebar({ sidebar }) {
 
-// rendering sidebar with a working home button and rest static buttons
   return(
     <>
     {sidebar?(

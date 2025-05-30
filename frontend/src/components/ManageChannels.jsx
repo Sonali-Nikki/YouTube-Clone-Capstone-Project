@@ -1,23 +1,19 @@
-// importing necessary hooks and components
 import { useState, useEffect } from "react";
 import ChannelItem from "./ChannelItem";
 
 function ManageChannels() {
-
-// state variables to store the channels, loading status and error
   const [channels, setChannels] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
-// state to trigger re-rendering
   const [render, setRender] = useState(true);
 
-// getting token, username and avatar from localStorage
+
+
   const token = localStorage.getItem("token");
   const username = localStorage.getItem("username") || "";
   const avatar = localStorage.getItem("avatar") || "";
 
-// fetching all the channels of the signed in user
+
   useEffect(() => {
       fetch('http://localhost:5000/api/channel', {
         method: "GET",
@@ -29,12 +25,12 @@ function ManageChannels() {
       .finally(() => setLoading(false));
     }, [render]);
 
-// rendering appropriate message
-  if (loading) return <p className="status-msg">Loading channels...</p>;
+
+    if (loading) return <p className="status-msg">Loading channels...</p>;
   if (error) return <p className="status-msg">Error: {error}</p>;
   if (channels.length==0) return <p className="status-msg">No channels created yet</p>;
 
-// rendering manage channel with user info and then all the channelItems
+
   return (
     <div className="manage-channels-content">
       <div className="user-info">
