@@ -7,12 +7,10 @@ import { adminData, usersData, channelsData } from "../data/data.js";
 
 async function seedData(){
   try {
-
     await User.deleteMany({});
     await Channel.deleteMany({});
     await Video.deleteMany({});
     await Comment.deleteMany({});
-
 
     const adminRegister = await fetch('http://localhost:5000/api/register', {
       method: 'POST',
@@ -31,14 +29,11 @@ async function seedData(){
 
     const adminSignedin = await adminSignin.json();
     if (!adminSignin.ok) throw new Error(adminSignedin.message || 'Signin failed');
-
-
     const adminToken = adminSignedin.token;
 
     const userToken = [];
 
     for (const userData of usersData) {
-
       const userRegister = await fetch('http://localhost:5000/api/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -73,7 +68,7 @@ async function seedData(){
 
       const createdChannel = await createChannel.json();
       if (!createChannel.ok) throw new Error(createdChannel.message || 'Channel creation failed');
-      console.log(`📺 Created channel: ${createdChannel.channelName}`);
+      console.log(`Created channel: ${createdChannel.channelName}`);
       for (const videoData of channelData.channelVideo) {
 
 // uploading the video
@@ -88,7 +83,7 @@ async function seedData(){
   
         const uploadedVideo = await uploadVideo.json();
         if (!uploadVideo.ok) throw new Error(uploadedVideo.message || 'Video uploading failed');
-        console.log(`🎞 Uploaded video: ${uploadedVideo.title} for ${createdChannel.channelName}`);
+        console.log(` Uploaded video: ${uploadedVideo.title} for ${createdChannel.channelName}`);
 
         for (const [index, commentData] of videoData.videoComment.entries()) {
 
